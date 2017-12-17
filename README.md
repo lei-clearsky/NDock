@@ -26,6 +26,6 @@ module.exports = {
   }
 };
 ```
-
+- Run `npm install nodemon -g`
 - Run `npm install`
 - Run `npm run start`
