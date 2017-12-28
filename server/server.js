@@ -1,7 +1,7 @@
 var chalk = require('chalk');
 var startDatabase = require('./db');
 var app = require('./app');
-var PORT = process.env.PORT || 3000;
+var PORT = process.env.PORT || 8080;
 
 var server = app.listen(PORT, function() {
 	console.log(chalk.blue('Server started on port', chalk.magenta(PORT)));
