@@ -51,21 +51,21 @@ router.get('/logout', function(req, res) {
 router.post('/register', function(req, res) {
   var hashedPassword = bcrypt.hashSync(req.body.password, 8);
   var body = {
-		email: req.body.email,
-		password: hashedPassword,
+    email: req.body.email,
+    password: hashedPassword,
   };
 
-	User.create(body, function(err, user) {
+  User.create(body, function(err, user) {
     if (err) {
       return res.status(500).send('There was a problem registering the user.');
     }
 
-		var token = jwt.sign({ id: user._id }, config.SECRET, {
-			expiresIn: 86400,
-		});
+    var token = jwt.sign({ id: user._id }, config.SECRET, {
+      expiresIn: 86400,
+    });
 
-		res.status(200).send({ auth: true, token: token });
-	});
+    res.status(200).send({ auth: true, token: token });
+  });
 });
 
 router.get('/me', verifyToken, function(req, res, next){
@@ -75,7 +75,7 @@ router.get('/me', verifyToken, function(req, res, next){
     }
 
     if (!user) {
-      return res.status(404).send("No user found.");	
+      return res.status(404).send("No user found.");  
     }
 
     res.status(200).send(user);
