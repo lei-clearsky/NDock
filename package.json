@@ -11,7 +11,7 @@
     "dev:server": "nodemon server/server.js",
     "dev:client": "cross-env NODE_ENV=development webpack-dev-server --open --hot",
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules",
-    "lint:eslint": "eslint .eslintignore --ext js,vue .",
+    "lint:eslint": "eslint --ignore-path .eslintignore --ext js,vue .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

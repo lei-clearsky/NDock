@@ -37,7 +37,7 @@
           email: '',
           password: '',
         },
-        error: ''
+        error: '',
       };
     },
     components: {

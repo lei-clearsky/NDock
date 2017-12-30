@@ -1,3 +1,4 @@
+/* eslint import/no-dynamic-require: 0 */
 const path = require('path');
 const mongoose = require('mongoose');
 const chalk = require('chalk');

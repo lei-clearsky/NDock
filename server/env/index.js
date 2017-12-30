@@ -1,3 +1,4 @@
+/* eslint import/no-dynamic-require: 0, global-require: 0 */
 const path = require('path');
 
 const devConfigPath = path.join(__dirname, './development.js');

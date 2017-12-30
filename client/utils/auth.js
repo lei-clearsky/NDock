@@ -1,3 +1,4 @@
+/* eslint no-undef: 0, no-param-reassign: 0 */
 import router from '../router';
 
 const BASE_URL = 'http://localhost:8080';
@@ -28,7 +29,7 @@ export default {
 
       this.user.authenticated = true;
       if (redirect) {
-        router.go(redirect);   
+        router.push(redirect);
       }
     }, (err) => {
       context.error = err;
@@ -51,7 +52,7 @@ export default {
 
   getAuthHeader() {
     return {
-      'Authorization': `Bearer ${localStorage.getItem('token')}`,
+      Authorization: `Bearer ${localStorage.getItem('token')}`,
     };
   },
 };
