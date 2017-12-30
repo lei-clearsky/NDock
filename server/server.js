@@ -1,14 +1,15 @@
-var chalk = require('chalk');
-var startDatabase = require('./db');
-var app = require('./app');
-var PORT = process.env.PORT || 8080;
+const chalk = require('chalk');
+const startDatabase = require('./db');
+const app = require('./app');
 
-var server = app.listen(PORT, function() {
-	console.log(chalk.blue('Server started on port', chalk.magenta(PORT)));
+const PORT = process.env.PORT || 8080;
+
+const server = app.listen(PORT, () => {
+  console.log(chalk.blue('Server started on port', chalk.magenta(PORT))); // eslint-disable-line no-console
 });
 
-startDatabase.then(server).catch(function (err) {
-  console.error('Initialization error:', chalk.red(err.message));
-  console.error('Process terminating . . .');
+startDatabase.then(server).catch((err) => {
+  console.error('Initialization error:', chalk.red(err.message)); // eslint-disable-line no-console
+  console.error('Process terminating . . .'); // eslint-disable-line no-console
   process.kill(1);
 });

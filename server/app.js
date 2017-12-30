@@ -1,6 +1,7 @@
-var path = require('path');
-var express = require('express');
-var app = express();
+const path = require('path');
+const express = require('express');
+
+const app = express();
 
 module.exports = app;
 
@@ -9,10 +10,10 @@ require('./config')(app);
 app.use('/api/', require('./routes'));
 
 // Static files
-var root = app.getValue('rootPath');
-var publicPath = path.join(root);
+const root = app.getValue('rootPath');
+const publicPath = path.join(root);
 app.use(express.static(publicPath));
 
-app.get('/*', function(req, res) {
+app.get('/*', (req, res) => {
   res.sendFile(app.get('indexPath'));
 });

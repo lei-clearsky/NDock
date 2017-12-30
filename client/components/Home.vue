@@ -11,14 +11,14 @@ import AppNav from './AppNav';
 export default {
   name: 'Home',
   components: {
-    AppNav
+    AppNav,
   },
-  data () {
+  data() {
     return {
-      msg: 'Welcome to Your Vue.js App'
-    }
-  }
-}
+      msg: 'Welcome to Your Vue.js App',
+    };
+  },
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
