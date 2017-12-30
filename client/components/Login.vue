@@ -14,8 +14,8 @@
 							<span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
 							<input v-model="credentials.password" id="txtPassword" type="password" class="form-control" name="password" placeholder="Password">
 							<span id="showPassword" class="input-group-btn">
-		            <button class="btn btn-default reveal" type="button"><i class="glyphicon glyphicon-eye-open"></i></button>
-		          </span>  
+								<button class="btn btn-default reveal" type="button"><i class="glyphicon glyphicon-eye-open"></i></button>
+							</span>  
 						</div>
 						<button class="btn btn-primary btn-block login-button" type="submit"><i class="fa fa-sign-in"></i> Login</button>	
 					</form>			
@@ -50,7 +50,7 @@
 		},
 		methods: {
 			handleLogin() {
-				auth.login(this, this.credentials, 'dashboard');
+				auth.login(this, this.credentials, '/dashboard');
 			}
 		}
 	}
