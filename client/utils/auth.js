@@ -1,10 +1,9 @@
 import axios from 'axios';
-import Router from 'vue-router';
+import router from '../router';
 
 const BASE_URL = 'http://localhost:8080';
 const LOGIN_URL = BASE_URL + '/api/auth/login';
 const SIGNUP_URL = BASE_URL + '/api/auth/register';
-const router = new Router();
 
 export default {
 
@@ -19,7 +18,7 @@ export default {
       this.user.authenticated = true
 
       if(redirect) {
-        router.push({path: redirect})        
+        router.push(redirect)        
       }
 
     }, err => {
@@ -34,7 +33,7 @@ export default {
       this.user.authenticated = true
 
       if(redirect) {
-        router.go(redirect)        
+        router.push(redirect)        
       }
 
     }, err => {

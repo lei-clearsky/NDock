@@ -45,7 +45,7 @@
 		},
 		methods: {
 			handleRegister() {
-				auth.register(this, this.credentials, 'dashboard');
+				auth.register(this, this.credentials, '/dashboard');
 			}
 		}
 	}
