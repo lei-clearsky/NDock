@@ -1,0 +1,15 @@
+{
+  "extends": "airbnb-base",
+  "plugins": [
+    "html",
+    "import"
+  ],
+  "rules": {
+    "import/no-unresolved": [
+      0,
+    ],
+    "import/extensions": [
+      0,
+    ]
+  }
+}

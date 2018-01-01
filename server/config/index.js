@@ -1,9 +1,8 @@
-module.exports = function(app) {
+/* eslint no-param-reassign: 0, global-require: 0 */
+module.exports = (app) => {
   app.setValue = app.set.bind(app);
 
-  app.getValue = function (path) {
-    return app.get(path);
-  };
+  app.getValue = path => app.get(path);
 
   require('./app-variables')(app);
 };

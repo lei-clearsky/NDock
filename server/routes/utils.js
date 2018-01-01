@@ -1,17 +1,17 @@
-var jwt = require('jsonwebtoken');
-var config = require('../env');
+const jwt = require('jsonwebtoken');
+const config = require('../env');
 
 function verifyToken(req, res, next) {
-  var token = req.headers['x-access-token'];
+  const token = req.headers['x-access-token'];
 
-  if(!token) {
+  if (!token) {
     return res.status(403).send({
       auth: false,
       message: 'No token provided.',
     });
   }
 
-  jwt.verify(token, config.SECRET, function(err, decoded) {
+  jwt.verify(token, config.SECRET, (err, decoded) => {
     if (err) {
       return res.status(500).send({
         auth: false,
@@ -21,9 +21,13 @@ function verifyToken(req, res, next) {
 
     req.userId = decoded.id;
     next();
+
+    return null;
   });
+
+  return null;
 }
 
-module.exports =  {
-  verifyToken: verifyToken,
+module.exports = {
+  verifyToken,
 };
