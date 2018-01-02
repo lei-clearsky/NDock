@@ -18,6 +18,10 @@ export default {
       if (redirect) {
         router.push(redirect);
       }
+
+      return {
+        err,
+      };
     });
   },
 };

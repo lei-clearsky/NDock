@@ -6,9 +6,12 @@ import Home from '../components/Home';
 import DashBoard from '../components/Dashboard';
 import Login from '../components/Login';
 import Register from '../components/Register';
+import auth from '../utils/auth';
 
 Vue.use(VueResource);
 Vue.use(Router);
+
+auth.checkAuth();
 
 Vue.http.headers.common.Authorization = `Bearer ${localStorage.getItem('token')}`;
 
