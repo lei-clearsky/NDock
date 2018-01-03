@@ -39,10 +39,13 @@ export default {
   logout() {
     localStorage.removeItem('token');
     this.user.authenticated = false;
+
+    router.push('/');
   },
 
   checkAuth() {
     const jwt = localStorage.getItem('token');
+
     if (jwt) {
       this.user.authenticated = true;
     } else {
