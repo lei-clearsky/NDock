@@ -28,6 +28,7 @@
 <script>
   import AppNav from './AppNav';
   import auth from '../utils/auth';
+  import router from '../router';
 
   export default {
     name: 'login',
@@ -39,11 +40,6 @@
         },
         error: '',
       };
-    },
-    beforeCreate() {
-      if (auth.user.authenticated) {
-        // redirect to dashboard
-      }
     },
     components: {
       AppNav,
