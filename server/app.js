@@ -10,10 +10,12 @@ require('./config')(app);
 app.use('/api/', require('./routes'));
 
 // Static files
-const root = app.getValue('rootPath');
-const publicPath = path.join(root);
-app.use(express.static(publicPath));
+if (process.env.NODE_ENV === 'production') {
+  const root = app.getValue('rootPath');
+  const publicPath = path.join(root);
+  app.use(express.static(publicPath));
 
-app.get('/*', (req, res) => {
-  res.sendFile(app.get('indexPath'));
-});
+  app.get('/*', (req, res) => {
+    res.sendFile(app.get('indexPath'));
+  });
+}
