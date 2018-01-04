@@ -28,6 +28,10 @@ module.exports = {
 ```
 
 - Run `npm install`
-- Run `npm run build`
 - Run `npm install nodemon -g` and `npm run dev:server` to watch changes
-- Run `dev:client` to use webpack devserver for hot reload on client changes
+- Run `dev` to use webpack devserver for hot reload on client changes, and nodemon for watch server side changes
+- Run `npm run lint:eslint` before PR to ensure code quality
+
+## Staging
+- Run `npm run build`
+- Run `npm run start`
