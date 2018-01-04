@@ -28,7 +28,6 @@
 <script>
   import AppNav from './AppNav';
   import auth from '../utils/auth';
-  import router from '../router';
 
   export default {
     name: 'login',
