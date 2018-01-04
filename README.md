@@ -29,7 +29,7 @@ module.exports = {
 
 - Run `npm install`
 - Run `npm install nodemon -g` and `npm run dev:server` to watch changes
-- Run `dev` to use webpack devserver for hot reload on client changes, and nodemon for watch server side changes
+- Run `npm run dev` to use webpack devserver for hot reload on client changes, and nodemon for watch server side changes
 - Run `npm run lint:eslint` before PR to ensure code quality
 
 ## Staging
