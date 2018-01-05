@@ -13,6 +13,7 @@
     "dev:client": "cross-env NODE_ENV=development webpack-dev-server --open --hot",
     "build": "npm run lint:eslint && cross-env NODE_ENV=production webpack --progress --hide-modules",
     "lint:eslint": "eslint --ignore-path .eslintignore --ext js,vue .",
+    "postinstall": "npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
