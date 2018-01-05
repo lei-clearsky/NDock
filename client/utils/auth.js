@@ -1,9 +1,8 @@
 /* eslint no-undef: 0, no-param-reassign: 0 */
 import router from '../router';
 
-const BASE_URL = 'http://localhost:8080';
-const LOGIN_URL = `${BASE_URL}/api/auth/login`;
-const SIGNUP_URL = `${BASE_URL}/api/auth/register`;
+const LOGIN_URL = '/api/auth/login';
+const SIGNUP_URL = '/api/auth/register';
 
 export default {
 

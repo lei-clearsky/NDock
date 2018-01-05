@@ -1,8 +1,7 @@
 /* eslint no-undef: 0, no-param-reassign: 0 */
 import router from '../router';
 
-const BASE_URL = 'http://localhost:8080';
-const ME_URL = `${BASE_URL}/api/auth/me`;
+const ME_URL = '/api/auth/me';
 
 export default {
   getUser(context, redirect) {
