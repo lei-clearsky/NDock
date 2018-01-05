@@ -32,6 +32,6 @@ module.exports = {
 - Run `npm run dev` to use webpack devserver for hot reload on client changes, and nodemon for watch server side changes
 - Run `npm run lint:eslint` before PR to ensure code quality
 
-## Staging
-- Run `npm run build`
+## Production
+- Run `NODE_ENV=production MONGOLAB_URI=MLAB_URL_HERE SECRET=JWT_SECRET_HERE npm run build`
 - Run `npm run start`
