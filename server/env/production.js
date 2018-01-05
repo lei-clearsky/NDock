@@ -1,6 +1,6 @@
 module.exports = {
   DATABASE_URI: process.env.MONGOLAB_URI,
-  SECRET: process.env.SESSION_SECRET,
+  SECRET: process.env.SECRET,
   TWITTER: {
     consumerKey: process.env.TWITTER_CONSUMER_KEY,
     consumerSecret: process.env.TWITTER_CONSUMER_SECRET,
