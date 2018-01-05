@@ -3,3 +3,4 @@ node_modules/
 dist/
 npm-debug.log
 server/env/development.js
+.env
