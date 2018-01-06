@@ -33,5 +33,5 @@ module.exports = {
 - Run `npm run lint:eslint` before PR to ensure code quality
 
 ## Production
-- Run `NODE_ENV=production MONGOLAB_URI=MLAB_URL_HERE SECRET=JWT_SECRET_HERE npm run build`
-- Run `npm run start`
+- Run `npm run build`
+- Run `NODE_ENV=production MONGOLAB_URI=MLAB_URL_HERE SECRET=JWT_SECRET_HERE npm run start`
