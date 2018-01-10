@@ -1,5 +1,5 @@
 # nDock
-A notes sharing web app.
+A presentation web app
 
 ## Development
 - Add `development.js` in `/server/env`
