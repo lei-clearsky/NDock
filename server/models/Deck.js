@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const DeckSchema = new mongoose.Schema({
   title: String,
-  cards: [ ],
+  cards: [],
 });
 
 mongoose.model('Deck', DeckSchema);
